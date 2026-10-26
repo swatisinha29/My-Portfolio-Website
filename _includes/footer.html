@@ -1,0 +1,15 @@
+{%- assign profile = site.data.profile -%}
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-contact">
+      <p class="label">Contact</p>
+      <p><a class="email" href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+    </div>
+    <ul class="footer-links">
+      {%- for l in profile.links %}
+      <li><a href="{{ l.url }}" rel="me noopener">{{ l.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p class="footer-note">{{ profile.role }} · {{ profile.location }}<br>© {{ site.time | date: "%Y" }} {{ profile.name }}</p>
+  </div>
+</footer>

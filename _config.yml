@@ -1,0 +1,46 @@
+# ------------------------------------------------------------------
+# Site settings
+# Most content lives in _data/ (profile, CV) and _projects/
+# (one Markdown file per case study). See README.md.
+# ------------------------------------------------------------------
+title: Swati Sinha
+description: >-
+  AI Product Manager with 5+ years building 0→1 B2B SaaS and AI-powered
+  products across compliance tech, analytics and marketplaces.
+url: "https://iamswatisinha.in"
+baseurl: ""
+lang: en
+
+# Navigation, in order. `url` is relative to the site root.
+nav:
+  - title: About
+    url: /
+  - title: Work
+    url: /work/
+  - title: Resume
+    url: /resume/
+
+collections:
+  projects:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "" }
+    values: { layout: page }
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

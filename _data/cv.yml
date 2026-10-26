@@ -1,0 +1,70 @@
+# Resume content. Case studies come from _projects/ automatically.
+# Dates are free text; use "present" for ongoing roles.
+
+# Optional: link to a PDF resume. Leave empty to hide the button.
+pdf: https://drive.google.com/file/d/1tdnzlg7z7Cmgxo9aSi0UwC-X0BarEVIM/view?usp=sharing
+
+summary: >-
+  Product Manager with 5+ years leading 0→1 B2B SaaS and AI-powered products
+  across compliance tech, analytics, and marketplace platforms. Pairs strong
+  core PM fundamentals (discovery, activation, retention, experimentation)
+  with hands-on AI builder experience, having designed and shipped working AI
+  agent prototypes using LLMs, RAG, and human-in-the-loop workflows. Known for
+  translating ambiguous problems into scalable product workflows and measurable
+  business outcomes.
+
+experience:
+  - role: Product Manager, Consent Management Platform
+    org: Rempute Systems
+    case_study: /work/cookiex/
+    start: Jun 2024
+    end: Dec 2025
+    details:
+      - Led the 0→1 launch of CookieX, a DPDPA-aligned Consent Management Platform, translating complex compliance requirements into scalable product workflows and self-serve customer experiences.
+      - Increased onboarding completion from 40% to 85% by redesigning activation flows with guided setup, compliance templates, and automated cookie categorization.
+      - Cut WordPress integration time from 10 minutes to 2 minutes with a 1-click plugin setup, improving activation success and reducing early-stage drop-off.
+      - Expanded platform adoption and compliance coverage by launching consent lifecycle capabilities, including audit logs, preference management, analytics dashboards, and grievance workflows.
+  - role: Product-Focused Scrum Master, Predictive Software Development Analytics Platform
+    org: Kinelabs Private Limited
+    start: Jul 2023
+    end: Apr 2024
+    details:
+      - Ran discovery interviews with engineering leads to surface unmet analytics needs; conceived and owned a PoC predictive team-performance dashboard tracking sprint velocity, lead time, and deployment frequency at squad level.
+      - The PoC directly drove the onboarding of a major enterprise client, validating the product's core analytics differentiation.
+      - Partnered with AI/ML teams to refine sprint and task prediction models, improving forecasting accuracy for data-driven engineering planning.
+      - Improved sprint visibility, stakeholder alignment, and prioritization efficiency for cross-functional teams of 10–15 through Agile workflows, Jira reporting, and value-vs-effort roadmap planning.
+  - role: Scrum Master / Product Operations, Translation & Localization SaaS Platform
+    org: Devnagri AI Pvt Ltd
+    start: May 2022
+    end: Jun 2023
+    details:
+      - Improved customer experience and retention by identifying UX friction points through behavioral analytics and optimizing critical user journeys across app.devnagri.com.
+      - Led evaluation and integration of LexiQA for automated translation quality assurance, reducing manual review effort and accelerating release cycles.
+      - Designed a structured Slack-to-Jira bug reporting workflow that cut duplicate issues by 50% and resolution time by 30%.
+      - Streamlined backlog prioritization and sprint execution to improve release coordination across engineering, QA, design, and operations.
+  - role: Co-Founder (Product & Engineering), Hyperlocal E-commerce
+    org: Blobdesign Pvt Ltd
+    case_study: /work/blob/
+    start: Jul 2020
+    end: May 2022
+    details:
+      - Founded and scaled a hyperlocal e-commerce web app across 5 cities, onboarding 130+ local shops, 70+ service professionals, 2,000+ products, and 1,000+ fulfilled orders.
+      - Owned the full product lifecycle (market research, user/vendor journey mapping, competitive analysis, and A/B testing), lifting conversion from 38% to 63%, cutting cancellations below 10%, and reaching ~80% fulfillment reliability.
+      - Built and maintained backend architecture with Node.js and MongoDB, developing APIs and workflow systems for scalable marketplace operations.
+
+education:
+  - degree: Bachelor of Engineering, Information Technology
+    institution: Oriental College of Technology
+    location: Bhopal, India
+    start: "2015"
+    end: "2019"
+
+skills:
+  - area: Product management
+    items: Product discovery, product strategy, user & market research, PRDs, roadmapping, OKRs, sprint planning, backlog prioritization, A/B testing, competitive analysis, GTM, product-led growth, retention, stakeholder management, Agile/Scrum
+  - area: AI & analytics
+    items: Generative AI, LLMs, RAG architecture, AI agents, orchestration, evaluation, prompt engineering, product analytics, SQL, KPI tracking
+  - area: Technical
+    items: REST APIs, Node.js, MongoDB, Python, JavaScript, HTML/CSS, Git & GitHub
+  - area: Tools
+    items: Jira, Confluence, Figma, Whimsical, Google Analytics, Notion, NotebookLM, ChatGPT, Claude, VS Code, Uizard, Julius AI, Lovable, Google AI Studio, Dify

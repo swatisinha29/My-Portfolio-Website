@@ -1,0 +1,11 @@
+{%- assign proj = include.project -%}
+<li class="project-item">
+  <div class="pub-meta">
+    <span class="venue-tag" data-kind="{{ proj.kind }}">{{ proj.kind_label }}</span>
+    <span class="year">{{ proj.years }}</span>
+  </div>
+  <div class="project-body">
+    <h3 class="project-title"><a href="{{ proj.url | relative_url }}">{{ proj.title }}</a></h3>
+    <p>{{ proj.summary }}</p>
+  </div>
+</li>

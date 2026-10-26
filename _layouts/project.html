@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="page-head">
+    <p class="eyebrow"><a href="{{ '/work/' | relative_url }}">Work</a> · {{ page.kind_label }}</p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="lede">{{ page.summary }}</p>
+  </header>
+
+  {%- if page.facts %}
+  <aside class="fact-card" aria-label="At a glance">
+    <dl>
+      {%- for f in page.facts %}
+      <div>
+        <dt>{{ f.label }}</dt>
+        <dd>{{ f.value }}</dd>
+      </div>
+      {%- endfor %}
+    </dl>
+    {%- if page.demo %}
+    <p><a class="button" href="{{ page.demo }}" rel="noopener">Try the live demo ↗</a></p>
+    {%- endif %}
+  </aside>
+  {%- endif %}
+
+  <div class="prose">
+{{ content }}
+  </div>
+
+  {%- assign all = site.projects | sort: "order" -%}
+  {%- for p in all -%}
+    {%- if p.url == page.url -%}
+      {%- assign i = forloop.index0 | plus: 1 -%}
+      {%- assign next = all[i] | default: all[0] -%}
+    {%- endif -%}
+  {%- endfor %}
+  <nav class="next-case" aria-label="Next case study">
+    <p class="label">Next case study</p>
+    <a href="{{ next.url | relative_url }}">{{ next.title }}</a>
+  </nav>
+</article>

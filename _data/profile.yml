@@ -1,0 +1,41 @@
+# Who you are. Used in the header, home page, footer and <head> tags.
+name: Swati Sinha
+short_name: Swati
+role: AI Product Manager
+eyebrow: AI Product Manager · B2B SaaS · 0→1
+location: India
+photo: /assets/img/profile.jpg
+photo_alt: Portrait of Swati Sinha
+
+email: ssinha098@gmail.com
+
+# Shown as text links in the footer and on the home page. Remove any you don't use.
+links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/ssinha098/
+  - label: Resume (PDF)
+    url: https://drive.google.com/file/d/1tdnzlg7z7Cmgxo9aSi0UwC-X0BarEVIM/view?usp=sharing
+
+# Focus areas, shown as a short list on the home page.
+interests:
+  - 0→1 products
+  - B2B SaaS
+  - Generative AI & RAG
+  - Product-led growth
+  - Human-in-the-loop AI
+
+# Headline results, shown on the home page. Keep each `what` short.
+numbers:
+  - value: 40% → 85%
+    what: Onboarding completion on CookieX after redesigning activation
+  - value: 10 → 2 min
+    what: WordPress integration time with a 1-click plugin
+  - value: 38% → 63%
+    what: Conversion on Blob through research and A/B testing
+  - value: 5 cities
+    what: Blob scaled to 130+ shops, 70+ service pros and 2,000+ products
+
+# WhatsApp number: `display` is shown on the contact card, `wa` is digits only (country code first).
+whatsapp:
+  display: "+91 93046 27670"
+  wa: "919304627670"

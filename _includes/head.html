@@ -1,0 +1,48 @@
+{%- assign profile = site.data.profile -%}
+{%- if page.url == "/" -%}
+  {%- assign page_title = site.title | append: " · " | append: profile.role -%}
+{%- else -%}
+  {%- assign page_title = page.title | append: " · " | append: site.title -%}
+{%- endif -%}
+{%- assign page_desc = page.summary | default: page.description | default: site.description | strip_html | strip_newlines -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_desc | escape }}">
+<meta name="author" content="{{ profile.name }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ profile.photo | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+<meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14131a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+{%- comment -%} Apply a saved theme before first paint so there is no flash. {%- endcomment -%}
+<script>
+  try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ profile.name | jsonify }},
+  "jobTitle": {{ profile.role | jsonify }},
+  "email": {{ profile.email | prepend: "mailto:" | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "image": {{ profile.photo | absolute_url | jsonify }},
+  "sameAs": [{% for l in profile.links %}{{ l.url | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+}
+</script>
